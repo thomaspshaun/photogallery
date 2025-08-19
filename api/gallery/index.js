@@ -5,7 +5,7 @@ import { fileURLToPath } from "url";
 export default async function (context, req) {
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
-  const GALLERIES_ROOT = path.join(__dirname, "../../galleries");
+  const GALLERIES_ROOT = path.join(__dirname, "../galleries");
 
   function scanFolder(folderPath) {
     const items = fs.readdirSync(folderPath, { withFileTypes: true });
