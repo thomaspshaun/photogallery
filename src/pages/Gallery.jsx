@@ -166,7 +166,7 @@ export default function Gallery() {
 
   function handlePhotoClick(photo) {
     if (!currentAlbum || !currentAlbum.photos) return;
-    const idx = currentAlbum.photos.findIndex(p => p.url === photo.url);
+    const idx = currentAlbum.photos.findIndex((p) => p.url === photo.url);
     setOverlayPhoto(photo);
     setOverlayIndex(idx);
   }
@@ -244,7 +244,14 @@ export default function Gallery() {
                 >
                   <button
                     className="btn btn-outline-light position-absolute"
-                    style={{ top: '50%', left: 10, transform: 'translateY(-50%)', fontWeight: 'bold', fontSize: '2rem', zIndex: 2 }}
+                    style={{
+                      top: "50%",
+                      left: 10,
+                      transform: "translateY(-50%)",
+                      fontWeight: "bold",
+                      fontSize: "2rem",
+                      zIndex: 2,
+                    }}
                     onClick={handlePrevPhoto}
                     disabled={overlayIndex === 0}
                   >
@@ -262,7 +269,14 @@ export default function Gallery() {
                   />
                   <button
                     className="btn btn-outline-light position-absolute"
-                    style={{ top: '50%', right: 10, transform: 'translateY(-50%)', fontWeight: 'bold', fontSize: '2rem', zIndex: 2 }}
+                    style={{
+                      top: "50%",
+                      right: 10,
+                      transform: "translateY(-50%)",
+                      fontWeight: "bold",
+                      fontSize: "2rem",
+                      zIndex: 2,
+                    }}
                     onClick={handleNextPhoto}
                     disabled={overlayIndex === currentAlbum.photos.length - 1}
                   >
